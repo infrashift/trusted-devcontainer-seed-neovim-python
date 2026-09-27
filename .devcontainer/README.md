@@ -7,7 +7,7 @@ Two things in one image, and the split is deliberate — see the header comment 
 
     template:  ghcr.io/infrashift/trusted-devcontainer-templates/python   (features, digests)
     editor:    the neovim-go template's terminal stack (tmux, neovim), plus
-               python-tools (basedpyright, installed userland with uv) and the lazyvim feature at 1.1.0 with extras=lang.python
+               pyrefly (a native Rust type checker + language server, installed userland with uv -- no Node) and the lazyvim feature at 1.1.0 with extras=lang.python
 
 A `devcontainer.json` cannot *reference* a template at build time -- a template
 is applied, and what it produced is what is committed here. Every feature is
@@ -31,7 +31,7 @@ digest-pinned, and every one depends on the same `bootstrap` digest.
 
 An interactive terminal login -- `ssh -t`, or the portal's `ssh <workspace>` --
 lands in a tmux session named `dev`: Neovim on the left, a shell on the right.
-basedpyright (types) and ruff (lint + format) attach to Python buffers; both are on `PATH`, installed userland under `~/.local`. Neovim downloads nothing at runtime (Mason is off; every plugin,
+pyrefly (types) and ruff (lint + format) attach to Python buffers; both are native binaries on `PATH`, installed userland under `~/.local` -- no Node anywhere in the image. Neovim downloads nothing at runtime (Mason is off; every plugin,
 parser and server was installed when the image was built). `ssh host cmd`, VS
 Code's server and its integrated terminal get a plain shell. To skip the layout:
 
@@ -43,7 +43,7 @@ make it here, in this repository, and let the forge build it.
 
 ## What the image carries, for the devpod verify
 
-    WORKSPACE_TOOLS=nvim,tmux,python3.14,uv,ruff,basedpyright,make,jq,yq,git,git-lfs,syft,grype
+    WORKSPACE_TOOLS=nvim,tmux,python3.14,uv,ruff,pyrefly,make,jq,yq,git,git-lfs,syft,grype
 
 `tmux` in that list also turns on the check that an interactive login lands in
 the layout and a non-interactive one does not.

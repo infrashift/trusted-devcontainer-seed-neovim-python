@@ -15,7 +15,7 @@ flavour.
 ## What is in it
 
     .devcontainer/          the environment: the trusted python template's features,
-                            tmux + Neovim + LazyVim (lang.python), the python-tools
+                            tmux + Neovim + LazyVim (lang.python), the pyrefly
                             feature, plus the workspace runtime contract (see its README)
     Makefile, scripts/      the golden workflow -- the interface between this
                             repository and the forge; for a devcontainer repository
@@ -41,7 +41,7 @@ flavour.
 
 ## The editor
 
-basedpyright (types) and ruff (lint + format) attach to Python buffers; both are on `PATH`, installed userland under `~/.local`.
+pyrefly (types) and ruff (lint + format) attach to Python buffers; both are native binaries on `PATH`, installed userland under `~/.local` -- no Node anywhere in the image.
 
 ## Package registries
 

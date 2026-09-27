@@ -4,7 +4,7 @@
 # digest-pinned Fedora 43 base and package baseline as every trusted template,
 # the trusted python template's features, and the terminal editor stack --
 # tmux, Neovim, the lazyvim feature with extras=lang.python, and the
-# python-tools feature. The template's `sshd' feature is left out on purpose --
+# pyrefly feature. The template's `sshd' feature is left out on purpose --
 # see section 2. The Dev Container CLI installs the features from
 # devcontainer.json; this file is the image they are installed onto.
 #
@@ -156,7 +156,7 @@ RUN chmod 0755 /home/user/.local/bin/ssh-login.sh
 
 # ~/.local/bin ON THE LOGIN PATH. Every feature in this image installs its tool
 # under $_REMOTE_USER_HOME/.local/bin or links it there -- nvim, tree-sitter,
-# stylua, shfmt, basedpyright, ruff, uv, jq, yq, syft, grype -- and the image's ENV
+# stylua, shfmt, pyrefly, ruff, uv, jq, yq, syft, grype -- and the image's ENV
 # PATH lists it. But sshd sanitises the
 # environment, the ForceCommand starts `bash -l', and a Fedora login shell
 # rebuilds PATH from /etc/profile, which does not add ~/.local/bin. So every
