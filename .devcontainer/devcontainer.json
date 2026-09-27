@@ -24,7 +24,7 @@
         "ghcr.io/infrashift/trusted-devcontainer-features/yq@sha256:ed2da9c3811de12596d012778beb7d82192511d35e7c67da729f76514b7f13cb": {},
         "ghcr.io/infrashift/trusted-devcontainer-templates/features/tmux@sha256:45a807381578a04cf4d3a40b7c89a38921cc07044b0f8ce0875349d001e3b78c": {},
         "ghcr.io/infrashift/trusted-devcontainer-templates/features/neovim@sha256:083f4694c1dfb59983f1c4d92caccfb08d1357bc3fa5d0c0c2f622b5cd369611": {},
-        "ghcr.io/infrashift/trusted-devcontainer-templates/features/python-tools@sha256:25fa5051124fa4be120e5d3386a18c6374a4b7a2595cc90f68d528d6e9dc2b76": {},
+        "ghcr.io/infrashift/trusted-devcontainer-templates/features/python-tools@sha256:3715f79b02f3f11d4a1fbd75acab9c217f473a4b8348099798bc76cc2803436c": {},
         "ghcr.io/infrashift/trusted-devcontainer-templates/features/lazyvim@sha256:c2e2be7cda7f43530a1a621585d53d832e37d5850bd7143915af1c9effb08c5a": {
             "extras": "lang.python"
         }
