@@ -7,7 +7,7 @@ Two things in one image, and the split is deliberate — see the header comment 
 
     template:  ghcr.io/infrashift/trusted-devcontainer-templates/python   (features, digests)
     editor:    the neovim-go template's terminal stack (tmux, neovim), plus
-               pyrefly (a native Rust type checker + language server, installed userland with uv -- no Node) and the lazyvim feature at 1.1.0 with extras=lang.python
+               pyrefly (a native Rust type checker + language server, installed userland with uv -- no Node) and the lazyvim feature at 1.2.0 with extras=lang.python
 
 A `devcontainer.json` cannot *reference* a template at build time -- a template
 is applied, and what it produced is what is committed here. Every feature is
@@ -26,6 +26,7 @@ digest-pinned, and every one depends on the same `bootstrap` digest.
 | `workspace-skel/` | Copied into an EMPTY host volume by the jobspec's prestart task |
 | `/etc/profile.d/local-bin.sh`, `/etc/profile.d/neovim-python.sh` | Every feature installs into, or links into, `~/.local/bin`; sshd starts the login shell without it. EDITOR/VISUAL=nvim |
 | `services.json` + `services/db/` | A PostgreSQL companion, as the vscode `python` seed carries: the forge builds it beside the devcontainer and the devpod root deploys it next to the workspace (`DB_HOST`/`DB_PORT` in the login shell). The `postgresql` package is its client (`psql`) |
+| `python` feature at 1.7.1 (`sha256:7303d322…`), ahead of the template's 1.7.0 | 1.7.0 skipped `uv python install` when `uv-ruff` had already fetched the interpreter as a tool dependency, leaving no `~/.local/bin/python3.14` (trusted-devcontainer-features#22). The template moves at its next release |
 
 ## Logging in
 

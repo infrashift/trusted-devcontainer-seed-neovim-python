@@ -11,7 +11,7 @@
     },
     "features": {
         "ghcr.io/infrashift/trusted-devcontainer-features/bootstrap@sha256:7f5bc8021fc701d0141dc4937b9faebfc2abcadcb905530fd3513ee4ee5df70b": {},
-        "ghcr.io/infrashift/trusted-devcontainer-features/python@sha256:49f88bfe87b4553456be9969da18c3596fc40f9717642ec5e2691179fdd41553": {
+        "ghcr.io/infrashift/trusted-devcontainer-features/python@sha256:7303d32215b9dd019e8f3b7f9b0f5ecc21d0fdaa8376f7d2ea7c4272ce270ed2": {
             "target_version": "3.14"
         },
         "ghcr.io/infrashift/trusted-devcontainer-features/uv-ruff@sha256:1ae28f3e7b3e5ef55a28eb87975466c515df469659e921f284c3bef64eaa1e04": {},
