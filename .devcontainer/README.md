@@ -7,7 +7,7 @@ Two things in one image, and the split is deliberate — see the header comment 
 
     template:  ghcr.io/infrashift/trusted-devcontainer-templates/python   (features, digests)
     editor:    the neovim-go template's terminal stack (tmux, neovim), plus
-               pyrefly (a native Rust type checker + language server, installed userland with uv -- no Node) and the lazyvim feature at 1.2.0 with extras=lang.python
+               pyrefly (a native Rust type checker + language server, installed userland with uv -- no Node) and the lazyvim feature at 1.2.2 with extras=lang.python
 
 A `devcontainer.json` cannot *reference* a template at build time -- a template
 is applied, and what it produced is what is committed here. Every feature is
